@@ -7,11 +7,14 @@
         </h1>
     </header>
         <h2>Ajouter un(e) Argonaute</h2>
-        <form class="new-member-form">
-        <label for="name">Nom de l&apos;Argonaute</label>
-        <input id="name" name="name" type="text" placeholder="Charalampos" />
-        <button type="submit">Envoyer</button>
-        </form>
+        {{ include('argonautes/_form.html.twig') }}
+        {#<form class="new-member-form">
+            <label for="name">Nom de l&apos;Argonaute</label>
+            <input id="name" name="name" type="text" placeholder="Charalampos" />
+            <button type="submit">Envoyer</button>
+            <!-- Include down make error with form_start(form) -->
+            {{ include('argonautes/_form.html.twig') }}
+        </form>#}
     <!-- Member list -->
     <h2>Présentation des membres</h2>
     <section class="member-list">
@@ -22,18 +25,18 @@
                     <th>Softskill</th>
                 </tr>
             </thead>
-        <tbody>
-        {% for argonaute in argonautes %}
-            <tr>
-                <td>{{ argonaute.name }}</td>
-                <td>{{ argonaute.softskill }}</td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
+            <tbody>
+            {% for argonaute in argonautes %}
+                <tr>
+                    <td>{{ argonaute.name }}</td>
+                    <td>{{ argonaute.softskill }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
         </table>
     </section>
 <footer>
