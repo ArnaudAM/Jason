@@ -29,8 +29,17 @@ header h1 {
 //  background:
 //}
 
-h1, h2 {
+h1 {
   text-align: center;
+}
+
+h2 {
+    margin-top: 1em;
+    text-align: center;
+}
+
+p {
+  margin-top: 1em;
 }
 
 label {
@@ -43,18 +52,28 @@ label {
   text-align: center;
 }
 
+.btn1 {
+  border: 1px solid black;
+  margin-top: 1em;
+}
 .member-item {
   padding: 0.25em 0;
 }
 
+.member-list {
+  text-align: center;
+  margin: auto;
+  padding: 5em auto;
+  width: 75%;
+}
+
 footer {
+  position:absolute;
+  width: 100%;
+  bottom: 0;
   margin-top: 2em;
   text-align: center;
   color: #fff;
   background: #f76c6c;
   padding: 0.25em 0;
 }
-
-//p {
-//    color:red;
-//}
