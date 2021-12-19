@@ -13,25 +13,22 @@
     <!-- Member list -->
     <h2>Présentation des membres</h2>
     <section class="member-list">
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Softskill</th>
-                </tr>
-            </thead>
-            <tbody>
+        <div class="table table-bordered">
+            <div class="row">
             {% for argonaute in argonautes %}
-                <tr>
-                    <td>{{ argonaute.name }}</td>
-                    <td>{{ argonaute.softskill }}</td>
-{#                    <td>{{ include('argonautes/_delete_form.html.twig') }}</td>#}                </tr>
+                <div class="col-4">
+                    {{ argonaute.name }} : </br>
+                    {{ argonaute.softskill }}
+                </div>
             {% else %}
-                <tr>
-                    <td colspan="4">no records found</td>
-                </tr>
+            </div>
+            <tr>
+                <td class = "col-md3">no records found</td>
+            </tr>
             {% endfor %}
-            </tbody>
-        </table>
+        </div>
     </section>
+    <footer>
+        <p>Réalisé par Jason en Anthestérion de l'an 515 avant JC</p>
+    </footer>
 {% endblock %}
